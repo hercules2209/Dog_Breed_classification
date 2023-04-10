@@ -19,7 +19,7 @@ def upload_image():
 
 def run_model():
     image = upload_image()
-    model = tf.keras.models.load_model("C:\\Users\\harsh\\OneDrive\\Documents\\GitHub\\dog_breed_classification\\Dog_breed_classification\\models\\dog_v1")
+    model = tf.keras.models.load_model("C:\\Users\\harsh\\OneDrive\\Documents\\GitHub\\dog_breed_classification\\Dog_Breed_Classification\\models\\dog_v1")
     prediction = model.predict(image)
     class_index = tf.argmax(prediction, axis=1).numpy()[0]
     confidence = round(100 * (np.max(prediction[0])), 2)
